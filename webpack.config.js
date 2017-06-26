@@ -45,6 +45,7 @@ module.exports = function makeWebpackConfig() {
      * Reference: http://webpack.github.io/docs/configuration.html#entry
      */
     config.entry = isTest ? {} : {
+      'routing': './src/routing.ts',
       'polyfills': './src/polyfills.ts',
       'vendor': './src/vendor.ts',
       'app': './src/main.ts' // our angular app
@@ -235,7 +236,7 @@ module.exports = function makeWebpackConfig() {
       // Reference: https://webpack.github.io/docs/code-splitting.html
       // Reference: https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
       new CommonsChunkPlugin({
-        name: ['vendor', 'polyfills']
+        name: ['app', 'routing', 'vendor', 'polyfills']
       }),
 
       // Inject script and link tags into html files

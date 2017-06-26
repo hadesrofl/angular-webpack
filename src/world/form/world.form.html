@@ -1,0 +1,11 @@
+<div class="form-group row">
+  <label for="name" class="col-2 col-form-label"><strong>World Name</strong></label>
+  <div class="col-10">
+    <input class="form-control" type="text" id="name" [(ngModel)]="name">
+  </div>
+</div>
+<h2>Description</h2>
+<my-editor id="world-desc" entity="world" #descEditor></my-editor>
+<h2>Secrets</h2>
+<my-editor id="world-secrets" entity="world" #secretEditor></my-editor>
+<button type="button" class="btn btn-success" (click)="persist()">Save</button>

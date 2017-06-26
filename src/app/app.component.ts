@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
 
-import { ApiService } from './shared';
-
 import '../style/app.scss';
 
 @Component({
   selector: 'my-app', // <my-app></my-app>
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  url = 'https://github.com/hadesrofl/angular-webpack';
-  title: string;
+  isIn = false;
 
-  constructor(private api: ApiService) {
-    this.title = this.api.title;
+  toggleState() { // click handler for navbar toggle
+    const bool = this.isIn;
+    this.isIn = bool === false ? true : false;
+  }
+  constructor() {
   }
 }

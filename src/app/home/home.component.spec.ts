@@ -9,8 +9,8 @@ describe('Home Component', () => {
   const html = '<my-home></my-home>';
 
   beforeEach(() => {
-    TestBed.configureTestingModule({declarations: [HomeComponent, TestComponent]});
-    TestBed.overrideComponent(TestComponent, { set: { template: html }});
+    TestBed.configureTestingModule({ declarations: [HomeComponent, TestComponent] });
+    TestBed.overrideComponent(TestComponent, { set: { template: html } });
   });
 
   it('should ...', () => {
@@ -21,5 +21,5 @@ describe('Home Component', () => {
 
 });
 
-@Component({selector: 'my-test', template: ''})
+@Component({ selector: 'my-test', template: '' })
 class TestComponent { }
